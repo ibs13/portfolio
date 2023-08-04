@@ -28,6 +28,26 @@
   <link href="css/resume.min.css" rel="stylesheet">
   <link href="css/w3.css" rel="stylesheet">
 
+  <style type="text/css">
+    .resPDF{
+        width: 800px !important;
+        height: 840px;
+      }
+    @media only screen and (max-width: 7000px) {
+      .resPDF{
+        width: 100% !important;
+      }
+      #project .row{
+        margin-bottom: 0px;
+      }
+
+
+      #project .row img{
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+
 </head>
 
 <body id="page-top" oncontextmenu="return false;">
@@ -692,7 +712,7 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="resume">
       <div class="row" align="center">
         <div class="col-lg-12" align="right">
-          <embed class="resPDF" src="ibrahim-hossain.pdf" width="800px" height="840px" />
+          <embed class="resPDF" src="ibrahim-hossain.pdf" />
         </div>
       </div>
     </section>
