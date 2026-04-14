@@ -1,0 +1,9 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "check": "python3 scripts/check_html.py",
+    "test": "npm run check"
+  }
+}
