@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
+import { asset } from '../utils/asset'
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -81,7 +82,7 @@ export default function Navbar() {
               )
             })}
             <a
-              href="/ibrahim-hossain.pdf"
+              href={asset('/ibrahim-hossain.pdf')}
               download
               className="ml-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-colors duration-200"
             >
@@ -130,7 +131,7 @@ export default function Navbar() {
                 )
               })}
               <a
-                href="/ibrahim-hossain.pdf"
+                href={asset('/ibrahim-hossain.pdf')}
                 download
                 className="mt-2 px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg text-center transition-colors duration-200"
               >

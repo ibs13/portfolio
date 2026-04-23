@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiExternalLink, HiCode, HiX } from 'react-icons/hi'
 import { projects } from '../data/portfolio'
+import { asset } from '../utils/asset'
 
 const containerVariants = {
   hidden: {},
@@ -53,7 +54,7 @@ export default function Projects() {
               {/* Image */}
               <div className="relative h-44 overflow-hidden bg-slate-800">
                 <img
-                  src={project.image}
+                  src={asset(project.image)}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
@@ -146,7 +147,7 @@ export default function Projects() {
               {/* Image */}
               <div className="h-52 overflow-hidden rounded-t-2xl bg-slate-800">
                 <img
-                  src={selectedProject.image}
+                  src={asset(selectedProject.image)}
                   alt={selectedProject.title}
                   className="w-full h-full object-cover"
                 />

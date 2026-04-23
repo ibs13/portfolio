@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { FaLinkedin, FaGithub, FaYoutube, FaFacebook } from 'react-icons/fa'
 import { HiDownload, HiArrowRight, HiChevronDown } from 'react-icons/hi'
 import { personalInfo, stats } from '../data/portfolio'
+import { asset } from '../utils/asset'
 
 const socialLinks = [
   { icon: FaLinkedin, url: personalInfo.social.linkedin, label: 'LinkedIn', color: 'hover:text-blue-400' },
@@ -93,7 +94,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4 mb-8">
               <a
-                href={personalInfo.resumeUrl}
+                href={asset(personalInfo.resumeUrl)}
                 download
                 className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5"
               >
@@ -141,7 +142,7 @@ export default function Hero() {
               <div className="relative p-[3px] rounded-full bg-gradient-to-br from-blue-400 via-violet-400 to-cyan-400 animate-float">
                 <div className="p-[3px] rounded-full bg-slate-950">
                   <img
-                    src="/img/profile.jpg"
+                    src={asset('/img/profile.jpg')}
                     alt="Ibrahim Hossain"
                     className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover"
                   />
