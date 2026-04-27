@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion'
-import { Briefcase, MapPin, Code2, GraduationCap } from 'lucide-react'
-import SectionHeading from '../ui/SectionHeading'
-import { profile } from '../../data/profile'
+import { motion } from "framer-motion";
+import { Briefcase, MapPin, Code2, GraduationCap } from "lucide-react";
+import SectionHeading from "../ui/SectionHeading";
+import { profile } from "../../data/profile";
 
 const facts = [
-  { icon: Briefcase, label: 'Experience', value: '5+ years' },
-  { icon: MapPin, label: 'Location', value: 'Copenhagen, DK' },
-  { icon: Code2, label: 'Focus', value: '.NET · React · TypeScript' },
-  { icon: GraduationCap, label: 'Degree', value: 'B.Sc. CSE, PUST' },
-]
+  { icon: Briefcase, label: "Experience", value: "5+ years" },
+  { icon: MapPin, label: "Location", value: "Copenhagen, DK" },
+  { icon: Code2, label: "Focus", value: ".NET · React · TypeScript" },
+  { icon: GraduationCap, label: "Degree", value: "B.Sc. CSE, PUST" },
+];
 
 export default function About() {
   return (
@@ -31,7 +31,7 @@ export default function About() {
             <div className="relative">
               <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden ring-4 ring-blue-100 dark:ring-blue-900/40 shadow-lg">
                 <img
-                  src="/profile.jpg"
+                  src="https://ibs13.github.io/portfolio/profile.jpg"
                   alt={profile.name}
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -57,11 +57,12 @@ export default function About() {
               {profile.summary}
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-              Most of my professional work has been backend-oriented — designing REST APIs,
-              modelling data schemas, building authentication flows, and wiring up production
-              deployments. I am equally comfortable on the frontend, particularly with React
-              and TypeScript. What I enjoy most is owning the full pipeline: from database
-              schema to a deployed, tested UI.
+              Most of my professional work has been backend-oriented — designing
+              REST APIs, modelling data schemas, building authentication flows,
+              and wiring up production deployments. I am equally comfortable on
+              the frontend, particularly with React and TypeScript. What I enjoy
+              most is owning the full pipeline: from database schema to a
+              deployed, tested UI.
             </p>
 
             {/* Quick facts grid */}
@@ -71,8 +72,13 @@ export default function About() {
                   key={label}
                   className="flex flex-col gap-1.5 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm"
                 >
-                  <Icon size={18} className="text-blue-600 dark:text-blue-400" />
-                  <span className="text-xs text-slate-500 dark:text-slate-400">{label}</span>
+                  <Icon
+                    size={18}
+                    className="text-blue-600 dark:text-blue-400"
+                  />
+                  <span className="text-xs text-slate-500 dark:text-slate-400">
+                    {label}
+                  </span>
                   <span className="text-sm font-semibold text-slate-800 dark:text-white leading-tight">
                     {value}
                   </span>
@@ -83,5 +89,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
