@@ -1,25 +1,28 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import PageShell from './components/layout/PageShell'
+import Hero from './components/sections/Hero'
+import About from './components/sections/About'
+import Experience from './components/sections/Experience'
+import Projects from './components/sections/Projects'
+import Skills from './components/sections/Skills'
+import Education from './components/sections/Education'
+import Contact from './components/sections/Contact'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased">
+    <PageShell>
       <Navbar />
       <main>
         <Hero />
+        <About />
         <Experience />
-        <Education />
-        <Skills />
         <Projects />
+        <Skills />
+        <Education />
         <Contact />
       </main>
       <Footer />
-    </div>
+    </PageShell>
   )
 }

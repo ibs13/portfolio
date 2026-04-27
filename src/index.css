@@ -3,31 +3,25 @@
 @tailwind utilities;
 
 @layer base {
-  ::-webkit-scrollbar {
-    width: 6px;
+  html {
+    scroll-behavior: smooth;
   }
-  ::-webkit-scrollbar-track {
-    @apply bg-slate-950;
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-slate-700 rounded-full;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-blue-500;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 }
 
 @layer utilities {
-  .gradient-text {
-    @apply bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent;
-  }
-  .glass {
-    @apply bg-slate-900/60 backdrop-blur-sm border border-slate-700/50;
-  }
-  .section-heading {
-    @apply text-3xl sm:text-4xl font-bold text-slate-100 mb-2;
-  }
-  .section-subheading {
-    @apply text-slate-400 mb-12;
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
